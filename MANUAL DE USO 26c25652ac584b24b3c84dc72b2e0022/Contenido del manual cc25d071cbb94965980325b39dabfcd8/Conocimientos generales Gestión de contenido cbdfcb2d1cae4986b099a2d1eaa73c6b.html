@@ -1,0 +1,704 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Conocimientos generales Gestión de contenido</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="cbdfcb2d-1cae-4986-b099-a2d1eaa73c6b" class="page sans"><header><h1 class="page-title">Conocimientos generales Gestión de contenido</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Etiquetas</th><td><span class="selected-value select-value-color-brown">Contenido</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Categoría</th><td><span class="selected-value select-value-color-green">Administrador</span></td></tr></tbody></table></header><div class="page-body"><p id="17fd4b1e-52d9-4f6d-a6f5-3bbf14380be4" class="">Bienvenido al tutorial de conocimientos generales, gestión de contenido. Aquí podrá informarse sobre cómo <strong>crear y editar páginas</strong>. Si no está familiarizado con qué es cada tipo de contenido, le sugerimos leer el manual de <a href="Secciones%20de%20contenido%20d78c978e843b402bbc3c5aaa4b0e7ba4.html">secciones de contenido</a>.</p><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><mark class="highlight-red">OPCIONES DEL MENÚ</mark></summary><div class="indented"><p id="dbf9dc00-76ad-4a02-ae42-0014c054ecb6" class="">La opción “<em>VER”</em> le permite visualizar como está construida la página actualmente.</p><p id="7f00ff46-dc1a-4f01-9c57-ecbb50978efc" class="">
+</p><figure id="39d30279-4baa-4fa5-99a8-2e72d4eb66d0" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled.png"><img style="width:2004px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled.png"/></a></figure><p id="ac4b47af-c935-4894-8e54-4babceccc721" class="">
+</p><p id="4bc581ef-946e-42fb-a43b-4c024e320f18" class=""><em>“EDITAR”</em> le puede permitir cambiar o agregar algún componente o información en la página en la que se encuentra.</p><p id="90d4b330-a21e-4d88-ad0d-2bc4682f3a60" class="">
+</p><figure id="177d1cb3-796b-4aaa-9e9c-9a1e0d49c8a1" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%201.png"><img style="width:464.0340881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%201.png"/></a></figure><p id="9df3821e-6e12-4a5c-9afd-3768f9436005" class="">
+</p><p id="abcd847a-a519-405b-bae7-83dfda499861" class="">Con la opción “<em>ELIMINAR”</em>  puede borrar completamente la página en la que se encuentra. Es clave que esté muy seguro de que desea eliminarla, ya que no hay forma de recuperarla.</p><p id="8e15a4a1-2dfb-415b-81cf-b2ca86b3f6f0" class="">
+</p><figure id="1778ebbe-6fb2-44c5-a663-d9705cf5dc8b" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%202.png"><img style="width:464.0340881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%202.png"/></a></figure><p id="0e276842-e9f8-4fe1-9b04-4b88d4b53d17" class="">
+</p><p id="4302a0dd-864b-4b7f-a5e1-c6d33c1010e3" class="">La opción “<em>CLONAR”</em> le permite copiar exactamente la página en la que se encuentra actualmente. Se puede usar este botón si desea utilizar los mismos componentes para armar otra página.</p><p id="ccb08f41-af8d-432f-a624-c98e56122753" class="">
+</p><figure id="3698ccaf-8c5e-498c-9782-3f2d984cf774" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%203.png"><img style="width:464.0340881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%203.png"/></a></figure><p id="0dde1513-773a-4ba4-bafd-e3e0b1923074" class="">
+</p><p id="c8d06eea-8d80-4275-bff3-223f97fb8fd4" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><mark class="highlight-red">EDITAR PÁGINAS EXISTENTES</mark></summary><div class="indented"><p id="b1134bc0-de3c-4567-a9f6-3258ec9226ec" class="">Tras hacer clic en “<em>EDITAR”, se dirigirá a una ventana en la cual podrá ver la estructura de la página. Desde aquí podrá mover o modificar componentes o información dentro de los mismos.</em></p><figure id="e8f11d43-fba9-45a5-9100-3cf704fe8431" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%204.png"><img style="width:1394px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%204.png"/></a></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><mark class="highlight-red">CREAR PÁGINA</mark></summary><div class="indented"><p id="71cbdec3-0cf9-4d24-87f2-5019edec4b1b" class="">Para crear una página completamente desde cero, ubíquese en la barra superior y <strong>seleccione: “</strong><em><strong>Manage</strong></em><strong>” &gt; “</strong><em><strong>Content</strong></em><strong>” &gt; “Página Básica” </strong>como en la imagen adjunta. </p><p id="70872d47-0f85-40d6-a356-89fdc1146639" class="">
+</p><p id="b93821d4-5428-4319-ab82-7508201482d6" class="">Luego, siga los pasos descritos a continuación:</p><figure id="0d082367-3cd6-440e-8d0f-47ce5c22e8a4" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%205.png"><img style="width:766px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%205.png"/></a></figure><ul id="9fc198c7-674a-4d71-8df9-5193f05508e6" class="toggle"><li><details open=""><summary><strong>1- TÍTULO</strong></summary><p id="68ee231b-a37f-4393-89d8-0e162a6e9391" class="">Colocar el Título deseado.</p><figure id="3379b065-4d07-4ed3-8cf4-6831d8cd206e" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%206.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%206.png"/></a></figure></details></li></ul><ul id="f93941a6-981a-4983-92dd-e334ae2ac84f" class="toggle"><li><details open=""><summary><strong>2- MAIN NAVIGATION</strong></summary><p id="bd217cf3-82ce-4460-807d-4c8dac444486" class="">Ir al Menú desplegable del lado izquierdo y seleccionar <strong>“</strong><em><strong>Menu Settings</strong></em><strong>”.</strong></p><figure id="d445eba3-d622-42d6-b0e0-79bdd39173d6" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%207.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%207.png"/></a></figure><p id="3eba1a8e-c420-4034-ae41-299c557bf7bc" class=""> Seleccione el cuadro que dice <em><strong>“Provide a menú link” y “Parent link”. </strong></em>Aquí deberá seleccionar el desplegable y buscar la sección donde desee guardarla.</p><figure id="291dddc5-4f31-45b7-9e69-6cfce3193dcc" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%208.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%208.png"/></a></figure></details></li></ul><ul id="e5cc18aa-31d7-4de3-9025-802bdff051b6" class="toggle"><li><details open=""><summary><strong>3- URL</strong></summary><p id="1d6cee70-6e04-4450-adef-ff8e0125d7dd" class="">Ir al Menú desplegable del lado izquierdo y seleccionar <strong>“</strong><em><strong>URL alias</strong></em><strong>”.</strong></p><figure id="08aa305a-f720-4a8c-840c-dd8a3020d5f6" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%209.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%209.png"/></a></figure><p id="e61b99b4-4331-45ab-989b-d93e13a5bfb5" class=""> Deseleccione el cuadro que dice “<em><strong>Generate automatic URL alias” </strong></em><strong>y coloque la URL que desea de la página manualmente sin espacios.</strong></p><p id="0b4f5c03-5b1a-41da-ad94-aaf5f657a5ef" class="">interagua.com.ec/conocenos/pruebamanual</p><figure id="43fbc0d5-d26b-4333-b4fc-13ecb61ad5e0" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2010.png"><img style="width:464.0340881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2010.png"/></a></figure></details></li></ul><ul id="0eebcdb0-f508-4274-a935-0eded03e361c" class="toggle"><li><details open=""><summary><strong>4- CONSTRUIR PÁGINA</strong></summary><p id="a05fa389-e8a0-4288-901b-10cec3076c1e" class="">Ir al Constructor para empezar a crear la página, seleccionando el botón desplegable <em><strong>“Site Builder”.</strong></em></p><figure id="96690b37-c286-4442-b328-4897a5b5b997" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2011.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2011.png"/></a></figure><ul id="148a512b-33b8-4bca-bf70-59462940e418" class="bulleted-list"><li style="list-style-type:disc">Para tener más información de qué es cada constructor, le recomendamos ir al <strong><mark class="highlight-red">ESTILO DE CONSTRUCTORES DE ESTA SECCIÓN.</mark></strong></li></ul><ul id="a01e05e7-27d7-48b4-b17c-99d84a5b1edf" class="bulleted-list"><li style="list-style-type:disc">Para saber cómo construir cada módulo, dirigirse a sección <strong><mark class="highlight-red">COMPONENTES.</mark></strong></li></ul><ul id="e5f5aa5f-04b7-414f-810a-a471d00d3061" class="bulleted-list"><li style="list-style-type:disc">Recuerde que para guardar debe darle clic en<strong><em> “Save”.</em></strong></li></ul><p id="820f215f-7ed0-45e9-93a7-c6f8b0f3a3a0" class="">
+</p></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><mark class="highlight-red">CLONAR PÁGINA</mark></summary><div class="indented"><p id="718ba493-fd31-4150-a9f6-a0146ad6f521" class="">Si desea crear una página nueva con características similares a una página ya creada, le sugerimos clonarla. Para ello debe dirigirse a la página que desea duplicar y buscar en las opciones del menú la opción<strong> “Clonar”.</strong></p><figure id="69f10115-fc1d-4e26-a03b-709f8e3380dd" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2012.png"><img style="width:464.0340881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2012.png"/></a></figure><p id="59cc13fb-0d72-4be1-92cd-7d6a02ac1939" class="">Una vez seleccionada, verá la siguiente página:</p><p id="db6256c1-0140-4f6b-b08c-99e03ebab3b2" class="">
+</p><figure id="e4d1943f-35d5-4c30-aa02-bb57467e8f58" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2013.png"><img style="width:464.0340881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2013.png"/></a></figure><p id="ef198bea-8dd4-4071-bd30-be015913ed72" class="">
+</p><p id="ea03aa1c-b43f-4240-9af0-de8f993584a4" class="">A continuación seguir los siguientes pasos:</p><ul id="2f357cab-9130-419c-a317-d5910ac3dfaa" class="toggle"><li><details open=""><summary><strong>1- TÍTULO</strong></summary><p id="ef4fae6f-c997-40d3-a5d1-6a0c4b543748" class="">Colocar el Título deseado</p><figure id="a1aebe6f-85f3-498f-8efa-8c729139b413" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2014.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2014.png"/></a></figure></details></li></ul><ul id="5a9eba34-315d-4e91-956e-8ec9651f8308" class="toggle"><li><details open=""><summary><strong>2- MAIN NAVIGATION</strong></summary><p id="922aae90-5c4a-486b-962f-d36e2ceb0038" class="">Ir al Menú desplegable del lado izquierdo y seleccionar <strong>“Menu Settings”.</strong></p><figure id="9ba6e3ed-802f-4adb-a476-50657e1d49c7" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2015.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2015.png"/></a></figure><p id="f3044439-456e-4136-b3dd-8c92e27f3381" class=""> Seleccione el cuadro que dice <em><strong>“Provide a menú link” y “Parent link”. </strong></em>Aquí deberá seleccionar el desplegable y buscar la sección donde desee guardarla.</p><figure id="63dec130-2592-43cc-9afe-6725e903f9d9" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%208.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%208.png"/></a></figure></details></li></ul><ul id="df9c758d-147a-493c-8406-33737c5f7eee" class="toggle"><li><details open=""><summary><strong>3- URL</strong></summary><p id="ff32d5e1-e14b-4dcb-b267-3a06aebafb7a" class="">Ir al Menú desplegable del lado izquierdo y seleccionar <strong>“</strong><em><strong>URL alias</strong></em><strong>”.</strong></p><figure id="519b476a-3761-429a-b00d-cf989b0421cf" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2016.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2016.png"/></a></figure><p id="cc6b049b-bf4f-4ff3-8a62-ee661e07fe48" class=""> Deseleccione el cuadro que dice “<strong><em>Generate automatic URL alias” y coloque la URL que desea de la página manualmente sin espacios.</em></strong></p><p id="f75d0eab-d56a-4f17-9bf2-a46e1ae1a972" class="">interagua.com.ec/conocenos/pruebamanual</p><figure id="36859963-9325-45aa-b529-be81a4cb8faf" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2010.png"><img style="width:464.0340881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2010.png"/></a></figure></details></li></ul><ul id="be3f99f1-c2ec-46b9-bb62-2a7f07c98065" class="toggle"><li><details open=""><summary><strong>4- CONSTRUIR PÁGINA</strong></summary><p id="42555a91-b93d-4187-95b8-f5aa0813be89" class="">Ir al Constructor para empezar a crear la página seleccionando el botón desplegable <em><strong>“Site Builder”</strong></em></p><figure id="dbf3e0ea-5f9e-443f-995e-2a5832ce2223" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2017.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2017.png"/></a></figure><figure id="a69b90e7-23a5-4c07-8806-3992ba05e114" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2011.png"><img style="width:436.0653381347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2011.png"/></a></figure><ul id="559b88eb-f487-4fab-84ea-6579bedcfbf5" class="bulleted-list"><li style="list-style-type:disc">Para tener más información de qué es cada constructor ir al <strong><mark class="highlight-red">ESTILO DE CONSTRUCTORES DE ESTA SECCIÓN.</mark></strong></li></ul><ul id="d18fb0c1-432a-4d71-abd5-70b2b27c0dc0" class="bulleted-list"><li style="list-style-type:disc">Para saber cómo construir cada módulo, dirigirse a sección <strong><mark class="highlight-red">COMPONENTES.</mark></strong></li></ul><ul id="579ac7fe-2fc4-4ce2-b120-b424cc716458" class="bulleted-list"><li style="list-style-type:disc">Recuerde que para guardar cosa debe darle clic en<strong><em> “Save”.</em></strong></li></ul><p id="62c39d65-a6f6-4cbe-8faf-679cb20654a6" class="">
+</p></details></li></ul><p id="850de730-1bd3-447d-aea6-b44d700095ec" class="">
+</p><p id="03155f87-c790-4c86-a2e1-7e3ef338e755" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><mark class="highlight-red">ASIGNAR PÁGINA NUEVA EN MENÚ</mark></summary><div class="indented"><p id="a9286545-c194-4318-a088-b2895518ac94" class="">Al crear o clonar una página nueva deberá confirmar que esta existe en la sección que eligió. Para eso diríjase a “<em><strong>Manage” </strong></em><strong>&gt;</strong><em><strong> “Structure” </strong></em><strong>&gt; </strong><em><strong>“Menus” </strong></em>y hacer clic en “<em><strong>Main Navigation”.</strong></em></p><figure id="dd563a09-acab-47ff-89c5-ecd691c254eb" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2018.png"><img style="width:464px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2018.png"/></a></figure><p id="09aeadce-e7bc-4072-9b28-2c1ef5fb011c" class="">Lo llevará a la siguiente página donde se ve la estructura.</p><figure id="b43c6ecb-953b-48ea-be95-bb5cfc916363" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2019.png"><img style="width:464px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2019.png"/></a></figure><p id="0cf21648-43c0-407c-a72b-e7acd19d7cb9" class="">Para revisar y/o agregar archivos multimedia, diríjase a:</p><ul id="72d31dc5-5a2e-4b20-8b9e-84c8b6907eef" class="toggle"><li><details open=""><summary><strong>Agregar una página nueva al menú</strong></summary><p id="f536761c-ba44-4c8f-a109-c84db002a8b8" class="">Para agregar una página nueva en el menú, seleccione el botón “<em><strong>Add link”.</strong></em></p><figure id="a1ad2e74-daf3-4a89-9888-d260800acb06" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2020.png"><img style="width:436px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2020.png"/></a></figure><figure id="11ccd45e-038a-4bec-ad23-dcaab3f46571" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2021.png"><img style="width:436px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2021.png"/></a></figure><p id="818829b4-1460-49eb-b651-990f375adadb" class="">1- Agregue el nombre de la página.</p><p id="899e8bdb-f6f7-4dc6-b23e-6188345c1d73" class="">2- Pegue el link de la misma o búsquela por el nombre en el buscador de la sección link.</p><figure id="026377d2-93c7-4e9d-bcb7-46097f6cfd77" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2022.png"><img style="width:436px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2022.png"/></a></figure><p id="0df73051-fb5f-4e25-bf0f-23e46330bf89" class="">3- Buscar la sección en “<em><strong>Main Navigation”</strong></em> y guardar.</p><figure id="05e85cca-697d-4c77-810e-22d5f578056c" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2023.png"><img style="width:436px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2023.png"/></a></figure></details></li></ul><ul id="082d7414-230b-4b54-9553-6158230da9e8" class="toggle"><li><details open=""><summary><strong>Mover una página de sección </strong></summary><p id="bd73c15b-1aa8-4d6d-b8d4-b25c05490608" class="">Para mover una página de lugar, haga clic en el ícono de flechas y mantenga presionado. Debe arrastrarlo  hasta la sección y orden que desea. Recuerde siempre guardar cualquier cambio en el botón “<em><strong>Save”.</strong></em></p><figure id="124e1ce5-fc4f-4dd7-a33d-3a3defb42be1" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2024.png"><img style="width:436px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2024.png"/></a></figure></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><mark class="highlight-red">ESTILO DE CONSTRUCTORES</mark></summary><div class="indented"><p id="0fc7d84c-ca82-4673-856d-fc076de0634c" class="">
+</p><p id="7159186e-71a1-424c-8e61-8392f6631b6b" class="">A continuación, le explicaremos los tipos de constructores disponibles para crear una página. Este componente lo encontrará en la parte inferior de la página de edición.</p><figure id="12f7551e-9bd4-44fe-aead-0d16a316bcce" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2025.png"><img style="width:1422px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2025.png"/></a></figure><ul id="1b76ecb1-fde3-4313-bd45-279db1aece7a" class="toggle"><li><details open=""><summary><strong>FULL</strong></summary><p id="bbd86a12-03b9-4298-b3c2-de6d65ca6bdc" class="">Este constructor no contiene márgenes de lado a lado en la pantalla. Esto quiere decir que el contenido que se cree en este constructor será  del mismo tamaño que el ancho de la pantalla <mark class="highlight-yellow"><strong>(Ver imagen adjunta con flecha en amarillo)</strong></mark><mark class="highlight-default">.</mark></p><figure id="a390dfb4-ae50-42b9-b682-ca8bae95a3e4" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2026.png"><img style="width:1312px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2026.png"/></a></figure><figure id="99e29e21-cf1b-414b-9232-a8bb65366e8a" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2027.png"><img style="width:2038px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2027.png"/></a></figure></details></li></ul><ul id="328f0d6b-0fe9-4ab0-a540-63a0dec2b5e0" class="toggle"><li><details open=""><summary><strong>ONE COLUM</strong></summary><p id="cdefaa60-a2ea-4b68-a5f6-092b8ca4d4b1" class="">Este constructor contiene márgenes de lado a lado en la pantalla y la información se presenta en el medio.<br/><br/></p><p id="e9887b68-f666-4b84-9a3f-79b92aa504d8" class=""><mark class="highlight-red"><strong>(Ver imagen adjunta con flechas en rojo)</strong></mark></p><figure id="d08ddf49-9797-47d7-bd9d-d3908ac5b26f" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2028.png"><img style="width:1274px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2028.png"/></a></figure><figure id="78134d13-b079-4b98-a908-d73d52d034df" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2029.png"><img style="width:2001px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2029.png"/></a></figure></details></li></ul><ul id="0796a664-59c6-42ea-b59d-35668b596a8d" class="toggle"><li><details open=""><summary><strong>50/50</strong></summary><p id="07135dd9-e3e9-4acb-81e1-159571e87cc3" class="">Cuando desee diseñar una sección en la que use la mitad de la pantalla para un contenido, y la otra mitad para otro, le recomendamos usar este constructor <mark class="highlight-blue"><strong>(Ver imagen adjunta con flecha en amarillo)</strong></mark><mark class="highlight-default">.</mark></p><p id="73cc8876-829f-4789-a6d2-8a363d8b5050" class="">El 50/50 estará constituido de lado a lado en la pantalla, lo que quiere decir que el contenido será del ancho de la pantalla <mark class="highlight-yellow"><strong>(Ver imagen adjunta con flecha en amarillo)</strong></mark><mark class="highlight-default">.</mark></p><p id="fc343c83-dbf7-4b3b-85e5-ac3899244a57" class="">
+</p><p id="b6b365cf-e7db-477b-b49b-26ca7958f42e" class="">
+</p><figure id="ffe64613-f90d-4f88-a2e8-fc56a7025fde" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2030.png"><img style="width:1278px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2030.png"/></a></figure><figure id="cc05d938-e033-4728-9d2e-1be6d8e5886e" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2031.png"><img style="width:2038px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2031.png"/></a></figure></details></li></ul><ul id="41a614da-71f3-4904-b7c8-fc413fa0ca4f" class="toggle"><li><details open=""><summary><strong>75/25</strong></summary><p id="58d67a6d-917d-4e6d-803a-942fc49c0c8a" class="">Aquí podrá realizar el diseño de una sección en la que  desee usar el 75% de la pantalla del lado izquierdo y el 25% de la pantalla del lado derecho <mark class="highlight-orange"><strong>(Ver imagen adjunta con flecha en naranja)</strong></mark><mark class="highlight-default">.</mark></p><p id="ecf6cb8d-4032-4674-8d62-951937bb4cec" class="">Este estará constituido de lado a lado en la pantalla y usted podrá elegir si esta llegue al ancho o si de la un margen menor al del <strong>ONE COLUM. </strong>El contenido que se cree en este constructor será  del ancho de la pantalla <mark class="highlight-red"><strong>(Ver imagen adjunta con flecha en rojo)</strong></mark><mark class="highlight-default">.</mark></p><figure id="fbd5a025-9b08-4524-af45-54a6d497503c" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2032.png"><img style="width:2019px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2032.png"/></a></figure><figure id="e3ac1ee3-5971-417d-8ec1-14d8cd00fcef" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2033.png"><img style="width:1148px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2033.png"/></a></figure></details></li></ul><p id="2063316e-fc33-4769-877a-a58cba8bd494" class="">
+</p><p id="e86d8d97-fdb6-4a4b-8902-c982a81733d7" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><mark class="highlight-red">TIPOGRAFÍAS Y TAMAÑOS ESTABLECIDOS PARA LA PÁGINA</mark></summary><div class="indented"><p id="8049851c-331e-4dad-b180-5ed445ee02cd" class="">Estos son los estilos y tamaños que deben usar en toda la página, tanto para párrafos como para títulos.</p><figure id="06752f6e-183b-4836-8032-3ef91d948fae" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2034.png"><img style="width:1566px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2034.png"/></a></figure><ul id="a5f93c0d-9cde-4d58-9f5a-e706d314408f" class="toggle"><li><details open=""><summary><strong>TÍTULOS</strong></summary><p id="291b4917-4377-45bb-a6e2-efe1bc1a70f0" class="">Los títulos deberán estar configurados de la siguiente manera: </p><p id="69c1170b-6406-4d91-8a70-aff9bf84188e" class=""><mark class="highlight-red_background"><strong>TIPO DE TEXTO</strong></mark></p><ol type="1" id="9270cd3f-09fb-4e8c-863d-e84fe7092ff1" class="numbered-list" start="1"><li>Seleccionar la frase que se desea cambiar.</li></ol><ol type="1" id="81ff16d1-7ded-41a8-82cf-3036f0df2353" class="numbered-list" start="2"><li>Ir a la primera opción desplegable <mark class="highlight-red">seleccionada en el cuadro</mark> <mark class="highlight-red">(ver cuadro en imagen adjunta)</mark><mark class="highlight-default">.</mark></li></ol><ol type="1" id="e801ed0c-059c-438a-b212-19ac23870e96" class="numbered-list" start="3"><li>Una vez se despliegue la lista, seleccionar la opción<strong> </strong><strong><mark class="highlight-red"><span style="border-bottom:0.05em solid">Encabezado 2</span></mark></strong><mark class="highlight-red"><span style="border-bottom:0.05em solid"> </span></mark><mark class="highlight-red">(ver cuadro en imagen adjunta)</mark></li></ol><figure id="c78bb32f-b724-4c76-8f74-aa0cd26f86a7" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2035.png"><img style="width:1614px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2035.png"/></a></figure><p id="0d76155b-08ef-4d2a-9bcc-00b84c27cad4" class=""><mark class="highlight-red_background"><strong>ESTILO DEL TEXTO</strong></mark></p><ol type="1" id="50dddead-78e8-4410-ae62-2c7b2dfa6326" class="numbered-list" start="1"><li>Seleccionar la segunda opción desplegable  <mark class="highlight-red">(ver cuadro en imagen adjunta)</mark></li></ol><ol type="1" id="b6991980-a2b6-4ef5-a01b-d375fea0d0e5" class="numbered-list" start="2"><li>Elegir el tamaño <mark class="highlight-red">seleccionado en el cuadro </mark><span style="border-bottom:0.05em solid"><strong><mark class="highlight-red">TITLE 16</mark></strong></span> <mark class="highlight-red">(ver cuadro en imagen adjunta)</mark></li></ol><ol type="1" id="13372c44-97b4-4b9f-8eda-576351cff299" class="numbered-list" start="3"><li>Elegir el estilo de tipografía <mark class="highlight-red">seleccionado en el cuadro </mark><span style="border-bottom:0.05em solid"><strong><mark class="highlight-red">TITLE RUFUS</mark></strong></span><mark class="highlight-red"> (ver cuadro en imagen adjunta)</mark></li></ol><figure id="e3f336da-109e-4070-84ee-9a6f3186caec" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2036.png"><img style="width:1633px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2036.png"/></a></figure></details></li></ul><ul id="3ff3e28a-008e-468c-a6d4-f09dbdf83105" class="toggle"><li><details open=""><summary><strong>PÁRRAFOS</strong></summary><p id="83965dad-b646-4ef7-a42c-728003aa2495" class="">Los párrafos deberán estar configurados de la siguiente manera: </p><p id="522321d3-45d6-4ae2-9cec-d3c71b7aee60" class=""><mark class="highlight-red_background"><strong>TIPO DE TEXTO</strong></mark></p><ol type="1" id="366cbf1a-9206-4d3b-9234-b56116f8532e" class="numbered-list" start="1"><li>Seleccionar la frase que se desea cambiar  </li></ol><ol type="1" id="34752cdd-0967-487c-9ba7-05bf970b9596" class="numbered-list" start="2"><li>Ir a la primera opción desplegable <mark class="highlight-red">seleccionada en el cuadro</mark> <mark class="highlight-red">(ver cuadro en imagen adjunta)</mark></li></ol><ol type="1" id="ed26234f-f5b7-4632-bc71-807639b81e6d" class="numbered-list" start="3"><li>Una vez se despliegue la lista, seleccionar la opción<span style="border-bottom:0.05em solid"><strong> </strong></span><span style="border-bottom:0.05em solid"><strong><mark class="highlight-red">PÁRRAFO</mark></strong></span><mark class="highlight-red"> (ver cuadro en imagen adjunta)</mark></li></ol><figure id="e6c9e2e0-4a98-4191-b14d-402c19f17fdb" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2037.png"><img style="width:1462px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2037.png"/></a></figure><p id="b8c49887-c80b-42fd-b163-735d26777219" class="">
+</p><p id="a5996b76-cdd0-45c5-9a7a-7ca923dcb126" class=""><mark class="highlight-red_background"><strong>ESTILO DEL TEXTO</strong></mark></p><ol type="1" id="f4bb257b-18bf-4aaa-b6b8-c10a39883b80" class="numbered-list" start="1"><li>Seleccionar la segunda opción desplegable  <mark class="highlight-red">(ver cuadro en imagen adjunta)</mark></li></ol><ol type="1" id="589a1bc5-f6b8-474a-8bf3-4a58479837cf" class="numbered-list" start="2"><li>Elegir el tamaño <mark class="highlight-red">seleccionado en el cuadro </mark><span style="border-bottom:0.05em solid"><strong><mark class="highlight-red">PARAGRAPH 16</mark></strong></span><span style="border-bottom:0.05em solid"><strong> </strong></span><mark class="highlight-red">(ver cuadro en imagen adjunta)</mark></li></ol><figure id="2e3d6d10-500c-4a7e-95e3-e23d257cf673" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2038.png"><img style="width:1660px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2038.png"/></a></figure></details></li></ul><p id="20a9264d-da1e-41da-afd2-88d8b59bd031" class="">
+</p><p id="6b6ece7f-337d-4e06-bcc7-107d5c72f547" class="">
+</p><p id="d3bf6cc6-c6ad-427f-b16d-b12948ef48a8" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><mark class="highlight-red">AGREGAR ARCHIVOS</mark></summary><div class="indented"><p id="a31b89c2-c5db-4b43-94c0-17c358fd9b88" class=""><strong>Archivos Multimedia</strong><div class="indented"><p id="6cb79346-2969-4ac6-b9fd-4ebb2081bdd2" class="">Para revisar y/o agregar archivos multimedia, diríjase a “<em><strong>Manage</strong></em>”, abrir la opción de “<strong>Contenido</strong>” y dar clic en “<strong>Multimedia</strong>”.</p><figure id="7f74ec87-5a23-4e35-946f-b5a8e6096c57" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2039.png"><img style="width:464px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2039.png"/></a></figure><p id="e12c4e99-2a8f-4080-a4f1-80e602c7fc27" class="">En esta sección podrá encontrar todas las <strong>imágenes y PDFs que se suben a la página</strong>. Además, para una búsqueda rápida y precisa, puede filtrarlas por nombre, tipo de documento, tamaño y estatus. También podrá ver en qué secciones se está usando dicho archivo.</p><figure id="47e2c253-9900-4b78-86a1-67504db24e9f" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2040.png"><img style="width:464px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2040.png"/></a></figure><p id="a778e5a6-e08e-417a-8cc0-523e7f135701" class="">Los archivos no tienen fecha de caducidad, por lo que solo se pueden borrar manualmente. Además, no se pueden editar en el Drupal.</p><p id="3d875276-e290-4c7c-9302-2a7eaa55e054" class="">A continuación, le explicaremos cómo subir archivos multimedia desde esta opción</p><ul id="d0df89d6-93d9-49ce-a26e-8b5d60793c7c" class="toggle"><li><details open=""><summary><strong>Subir un archivo multimedia - IMAGEN</strong></summary><p id="93ecdf54-a6e4-4844-9385-5c54394636aa" class="">Para subir un archivo, tiene que seguir los pasos que describiremos a continuación</p><p id="2a7a3e8f-bc0a-49d9-af08-0d1529ce548b" class="">1. Abrir la opción de “Contenido” &gt; “Multimedia” &gt; “Add media” &gt; <em><strong>“Image”.</strong></em></p><figure id="5dc3ccad-429a-4233-9a3a-dc10e8ef3ee6" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2041.png"><img style="width:408px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2041.png"/></a></figure><figure id="deb3830f-2bf3-46cd-bee2-647998a155cd" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2042.png"><img style="width:1890px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2042.png"/></a></figure><p id="92bad0f1-d7b4-40de-9f8c-94c522448a72" class="">2. Subir el archivo desde el ordenador.<div class="indented"><figure id="d7df9c52-ef20-480b-9312-7a8131fc8c09" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2043.png"><img style="width:806px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2043.png"/></a></figure></div></p><p id="dae7d7fe-e49e-439a-860a-830e8e3e0679" class="">3. Agregar el texto alternativo y guardar al final de la página. </p><figure id="81af3009-da2a-458b-aa70-46cc99b9ddf5" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2044.png"><img style="width:408px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2044.png"/></a></figure></details></li></ul><ul id="328b47c1-53b8-414c-b356-912cfb337058" class="toggle"><li><details open=""><summary><strong>Subir un archivo multimedia - VIDEO</strong></summary><p id="1c3c1e3c-224a-4454-ae14-95419f28e8de" class="">1. Abrir la opción de “Contenido” &gt; “Multimedia” &gt; “Add media” &gt; <em><strong>“S3 VIDEO”.</strong></em></p><figure id="c5f27b28-30d6-4044-83b2-8dfce39a2906" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2045.png"><img style="width:412px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2045.png"/></a></figure><figure id="51ebe7a0-6c72-45e4-a4ff-846b06261670" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2046.png"><img style="width:412px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2046.png"/></a></figure><p id="f0d14f2a-a40a-497b-af82-716553426078" class="">2- Subir el archivo desde el ordenador.</p><figure id="7c94c7a0-77de-4cb1-b93e-a6be92fec893" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2047.png"><img style="width:412px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2047.png"/></a></figure><p id="66159fb5-c2f9-4d42-aff6-9f0723e632fb" class="">3-  Colocar el titular, copiar el link y guardar al final de la página.</p><figure id="41d2b2e3-caaa-45ed-837d-a9807f54198d" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2048.png"><img style="width:412px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2048.png"/></a></figure></details></li></ul><ul id="cbc287fa-f59a-4765-b760-577fb0eee179" class="toggle"><li><details open=""><summary><strong>Subir un archivo multimedia - DOCUMENTO</strong></summary><p id="20c59698-f068-40bc-baef-a71aa0ec6746" class="">Para subir un archivo, tiene que seguir los pasos que describiremos a continuación</p><ol type="1" id="2223d4aa-60a0-48ec-a152-ce8ed7313f68" class="numbered-list" start="1"><li>Abrir la opción de “Contenido” &gt; “Multimedia” &gt; “Add media” &gt; <em><strong>“S3 VIDEO”.</strong></em></li></ol><figure id="8c507aa4-27fc-4b71-b3cd-1682549b14ed" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2049.png"><img style="width:408.0965881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2049.png"/></a></figure><figure id="a31a06c5-91bf-4ec9-992b-0047d7c3fe67" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2050.png"><img style="width:408.0965881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2050.png"/></a></figure><p id="8d0f30c3-4a88-487d-8b0f-da0aa59458d3" class=""> 2- Agregar Título.</p><figure id="d3358fbb-4dbe-4de0-a335-164e3664ab4f" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2051.png"><img style="width:408.0965881347656px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2051.png"/></a></figure><p id="940590d9-a263-4ea9-9a88-5d38af77fb2b" class="">3-  Seleccionar el archivo a subir.</p><figure id="90de8e02-2c56-45f8-897d-3795b629f1c5" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2052.png"><img style="width:408px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2052.png"/></a></figure><p id="d7ed32a6-2563-4ebd-b140-9b7111bf7929" class="">4- Una vez cargado copiar el URL y guardar.</p><figure id="13eaee84-ca94-4f8a-a5af-5d91487a5848" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2053.png"><img style="width:408px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2053.png"/></a></figure><figure id="5c0e4aa1-fffb-4e26-b241-5ebeeae9d403" class="image"><a href="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2054.png"><img style="width:408px" src="Conocimientos%20generales%20Gestio%CC%81n%20de%20contenido%20cbdfcb2d1cae4986b099a2d1eaa73c6b/Untitled%2054.png"/></a></figure></details></li></ul></div></p><p id="60ebb18e-c58b-459b-8149-89dc477c3fd1" class="">
+</p><p id="8bc2f509-574b-4f4f-aa7b-177072d7399a" class="">
+</p></div></details><p id="9e8c5e17-c561-4daa-9c35-f1912ab4a3d1" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
